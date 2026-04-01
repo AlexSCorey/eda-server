@@ -10,7 +10,7 @@
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-blue)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue)
 
-# Event Driven Ansible Controller
+# Event Driven Ansible Controller test
 
 This repository contains the source code for the Event Driven Ansible Controller, aka EDA-Controller.
 
@@ -47,10 +47,10 @@ You can access the Event Driven Ansible OpenAPI specification from a
 running instance:
 
 - API docs (browser):
-  - http://$HOST:$PORT/api/eda/v1/docs/
+    - http://$HOST:$PORT/api/eda/v1/docs/
 - OpenAPI JSON:
-  - http://$HOST:$PORT/api/eda/v1/openapi.json
-Download examples:
+    - http://$HOST:$PORT/api/eda/v1/openapi.json
+      Download examples:
 
 ```bash
 # Basic auth (JSON)
@@ -63,6 +63,7 @@ curl -H "Authorization: Bearer $TOKEN" \
 ```
 
 Notes:
+
 - Endpoints may require authentication depending on your deployment.
 - For HTTPS with self-signed certificates, add `-k` to curl for local testing.
 - The specification's `info.version` reflects the installed `aap-eda`
