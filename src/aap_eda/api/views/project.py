@@ -96,7 +96,11 @@ class ProjectViewSet(
     mixins.ListModelMixin,
     viewsets.GenericViewSet,
 ):
-    queryset = models.Project.objects.order_by("id")
+    queryset = models.Project.objects.select_related(
+        "created_by",
+        "modified_by",
+        "organization",
+    ).order_by("id")
     serializer_class = serializers.ProjectSerializer
     filter_backends = (DjangoFilterBackend,)
     filterset_class = filters.ProjectFilter
